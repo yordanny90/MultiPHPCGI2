@@ -2,4 +2,5 @@
 /.vscode/
 /.history/
 /tmp/
-/nginx_conf/logs/*
+/nginx_conf/logs/
+/app/
