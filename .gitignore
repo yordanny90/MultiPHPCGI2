@@ -1,6 +1,10 @@
 /.idea/
 /.vscode/
 /.history/
+/.vs/
+/src_manager/bin/
+/src_manager/obj/
 /tmp/
-/nginx_conf/logs/
+/nginx_conf/logs/*
+/nginx_conf/temp/*
 /app/

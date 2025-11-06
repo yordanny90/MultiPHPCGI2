@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPHP2", "MultiPHP2.csproj", "{A6016535-D1B3-4DC0-9794-BEFE77C4BB7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6016535-D1B3-4DC0-9794-BEFE77C4BB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6016535-D1B3-4DC0-9794-BEFE77C4BB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6016535-D1B3-4DC0-9794-BEFE77C4BB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6016535-D1B3-4DC0-9794-BEFE77C4BB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99875547-80A0-4486-BFF7-6A462B2926B9}
+	EndGlobalSection
+EndGlobal
