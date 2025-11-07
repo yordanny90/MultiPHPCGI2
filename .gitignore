@@ -8,3 +8,5 @@
 /nginx_conf/logs/*
 /nginx_conf/temp/*
 /app/
+/src_UI/.vs
+/src_UI/obj

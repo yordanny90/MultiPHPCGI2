@@ -4,6 +4,7 @@ call "%~dp0bin\cert_generate.bat"
 if %ERRORLEVEL% neq 0 (
 	goto error
 )
+echo on
 call "%~dp0bin\install-nginx.bat" %ver_nginx%
 if %ERRORLEVEL% neq 0 (
 	goto error
@@ -16,7 +17,7 @@ call "%~dp0bin\install-php.bat" %ver_php%
 if %ERRORLEVEL% neq 0 (
 	goto error
 )
-call "%~dp0bin\fix-apache.bat"
+call "%~dp0bin\fix-nginx-apache.bat"
 if %ERRORLEVEL% neq 0 (
 	goto error
 )
