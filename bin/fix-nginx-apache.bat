@@ -32,9 +32,22 @@ echo Preparando Apache
 set "conf=%MULTIPHPDIR%\apache_conf\conf\httpd.conf"
 echo Actualizando "%conf%"...
 
-set "apachedll=php%ver_php:~0,1%apache2_4.dll"
+set verXphp=%ver_php:~0,1%
+set "apachedll=php%verXphp%apache2_4.dll"
 if not exist "%MULTIPHPDIR%\app\php\%ver_php%\%apachedll%" (
 	echo Error: No se encontro el "%apachedll%" en PHP %ver_php%.
+	exit /b %ERRORLEVEL%
+)
+set phpmod=php_module
+if "%verXphp%" == "5" (
+	set phpmod=php5_module
+)
+if "%verXphp%" == "7" (
+	set phpmod=php7_module
+)
+powershell -Command "(Get-Content '%conf%') -replace '^(LoadModule php.?_module )(.*)', 'LoadModule %phpmod% $2' | Set-Content '%conf%'"
+if %ERRORLEVEL% neq 0 (
+	echo Error: No se pudo actualizar.
 	exit /b %ERRORLEVEL%
 )
 powershell -Command "(Get-Content '%conf%') -replace '^(Define APACHEDLL) .*', '$1 \"%apachedll%\"' | Set-Content '%conf%'"
